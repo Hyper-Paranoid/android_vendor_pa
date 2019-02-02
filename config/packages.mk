@@ -23,6 +23,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     Longshot \
+    OmniStyle \
     ParanoidPapers \
     ParanoidQuickStep \
     Schizophrenia \
