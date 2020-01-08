@@ -200,3 +200,8 @@ PRODUCT_DEXPREOPT_QUICKEN_APPS += \
     Dialer
 
 endif #TARGET_DISABLES_GAPPS
+
+# Allows registering device to Google easier for gapps
+# Integrates package for easier Google Pay fixing
+PRODUCT_PACKAGES += \
+    sqlite3
