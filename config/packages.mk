@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
     ParanoidPapers \
     ParanoidQuickStep \
     Schizophrenia \
+    StitchImage \
     ThemePicker
 
 ifeq ($(TARGET_DISABLES_GAPPS), true)
