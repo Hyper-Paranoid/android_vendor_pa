@@ -44,11 +44,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-# Default notification/alarm sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.alarm_alert=Bright_morning.ogg \
-    ro.config.notification_sound=End_note.ogg
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \

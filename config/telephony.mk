@@ -10,10 +10,6 @@ PRODUCT_PACKAGES += \
     Stk \
     CellBroadcastReceiver
 
-# Default ringtone
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=Leaps_and_bounds.ogg
-
 # Dual SIM - allow setting calling account to 'Ask every time'
 # rather than resetting to sub 1 every boot
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
