@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     Longshot \
     ParanoidPapers \
     ParanoidQuickStep \
+    Schizophrenia \
     ThemePicker
 
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
