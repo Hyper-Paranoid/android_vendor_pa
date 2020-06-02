@@ -106,3 +106,7 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+# ViaBrowser
+PRODUCT_PACKAGES += \
+    ViaBrowser
