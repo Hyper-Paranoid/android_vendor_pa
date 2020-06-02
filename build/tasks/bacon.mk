@@ -1,7 +1,7 @@
-
 # Copyright (C) 2017 Unlegacy-Android
 # Copyright (C) 2017 The LineageOS Project
 # Copyright (C) 2019 Paranoid Android
+# Copyright (C) 2020 Hyper Paranoid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,10 +18,27 @@
 # -----------------------------------------------------------------
 # PA OTA update package
 
-PA_TARGET_PACKAGE := $(PRODUCT_OUT)/pa-$(PA_VERSION).zip
+PA_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PA_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(PA_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(PA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PA_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(PA_TARGET_PACKAGE)" >&2
+	@echo ""
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_BLU}"        ██╗  ██╗ ██╗   ██╗ ██████╗  ███████╗ ██████╗           "${CL_RST}
+	@echo -e ${CL_BLU}"        ██║  ██║  ██╗ ██╔╝ ██╔══██╗ ██╔════╝ ██╔══██╗          "${CL_RST}
+	@echo -e ${CL_BLU}"        ███████║   ████╔╝  ██████╔╝ █████╗   ██████╔╝          "${CL_RST}
+	@echo -e ${CL_BLU}"        ██╔══██║    ██╔╝   ██╔═══╝  ██╔══╝   ██╔══██╗          "${CL_RST}
+	@echo -e ${CL_BLU}"        ██║  ██║    ██║    ██║      ███████╗ ██║  ██║          "${CL_RST}
+	@echo -e ${CL_BLU}"        ╚═╝  ╚═╝    ╚═╝    ╚═╝      ╚══════╝ ╚═╝  ╚═╝          "${CL_RST}
+	@echo -e ${CL_BLU}"██████╗  █████╗ ██████╗  █████╗ ███╗   ██╗ ██████╗ ██╗███████╗ "${CL_RST}
+	@echo -e ${CL_BLU}"██╔══██╗██╔══██╗██╔══██╗██╔══██╗████╗  ██║██╔═══██╗██║██╔═══██╗"${CL_RST}
+	@echo -e ${CL_BLU}"██████╔╝███████║██████╔╝███████║██╔██╗ ██║██║   ██║██║██║   ██║"${CL_RST}
+	@echo -e ${CL_BLU}"██╔═══╝ ██╔══██║██╔══██╗██╔══██║██║╚██╗██║██║   ██║██║██║   ██║"${CL_RST}
+	@echo -e ${CL_BLU}"██║     ██║  ██║██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║███████╔╝"${CL_RST}
+	@echo -e ${CL_BLU}"╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝╚══════╝ "${CL_RST}
+	@echo -e ${CL_RED}"                          StayParanoid                         "${CL_RST}
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_CYN}"Package Complete: $(PA_TARGET_PACKAGE)" >&2                     ${CL_RST}
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════"${CL_RST}
