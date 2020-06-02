@@ -27,11 +27,6 @@ PRODUCT_PACKAGES += \
     ParanoidQuickStep \
     ThemePicker
 
-ifneq ($(filter RELEASE BETA,$(PA_BUILDTYPE)),)
-    PRODUCT_PACKAGES += \
-    ParanoidHub
-endif
-
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
 TARGET_ENABLE_FACE_SENSE := true
 PRODUCT_PACKAGES += \
@@ -42,9 +37,9 @@ endif
 
 ifeq ($(TARGET_DISABLES_GAPPS), true)
 PRODUCT_PACKAGES += \
-    ChromePublic \
     MarkupGoogle \
-    MatchmakerPrebuilt
+    MatchmakerPrebuilt \
+    messaging
 endif
 
 # Paranoid Android Overlays
@@ -55,12 +50,6 @@ PRODUCT_PACKAGES += \
 # Snapdragon apps
 PRODUCT_PACKAGES += \
     SnapdragonGallery
-
-# Abstruct
-PRODUCT_PACKAGES += Abstruct
-
-# Retro Music Player
-PRODUCT_PACKAGES += RetroMusicPlayer
 
 # CAF packages
 # TCP Connection Management
