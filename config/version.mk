@@ -36,3 +36,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.pa.version.code=$(PA_VERSION_CODE) \
     ro.pa.build.variant=$(PA_BUILD_VARIANT)
+
+# Additional Properties
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.caf.version=$(shell grep "<default revision=" .repo/manifests/default.xml | cut -d '"' -f2 | cut -d "/" -f3)
